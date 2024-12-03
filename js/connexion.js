@@ -31,3 +31,29 @@ links.forEach(link => {
         );
     });
 });
+
+
+
+
+
+
+
+const rotatingDiv = document.querySelector(".rotating-div");
+
+// Animation au survol
+rotatingDiv.addEventListener("mouseenter", () => {
+    gsap.to(rotatingDiv, {
+        rotation: -10, // Rotation légère à gauche
+        duration: 0.4,
+        ease: "power2.out",
+    });
+});
+
+// Retour à l'état initial lorsque la souris quitte
+rotatingDiv.addEventListener("mouseleave", () => {
+    gsap.to(rotatingDiv, {
+        rotation: 0, // Retour à l'angle de départ
+        duration: 0.4,
+        ease: "power2.in",
+    });
+});

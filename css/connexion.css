@@ -24,3 +24,42 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+.rotating-div{
+    animation: swing 2s infinite ease-in-out;
+}
+.rotating-div:hover {
+    transform: rotate(-10deg); /* Légère rotation à gauche */
+}
+
+.rotating-div:hover ~ .rotating-div {
+    transform: rotate(10deg); /* Légère rotation à droite */
+}
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg); /* Tourne à gauche */
+    }
+}
+
+
+
+.rotating-div2{
+    animation: swing2 2s infinite ease-in-out;
+}
+.rotating-div2:hover {
+    transform: rotate(-10deg); /* Légère rotation à gauche */
+}
+
+.rotating-div2:hover ~ .rotating-div {
+    transform: rotate(10deg); /* Légère rotation à droite */
+}
+@keyframes swing2 {
+    0%, 100% {
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg); /* Tourne à gauche */
+    }
+}
