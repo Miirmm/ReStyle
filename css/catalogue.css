@@ -4,3 +4,49 @@ h1{
 .section-grid-products h2{
     font-family: "Merienda", sans-serif;
 }
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #8a41fe;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%; /* Ligne visible au survol */
+}
+
+ .button-cta-fill {
+     position: relative;
+     overflow: hidden; /* Permet de masquer le pseudo-élément en dehors des limites */
+     transition: color 0.3s ease;
+ }
+
+.button-cta-fill:hover {
+    color: white; /* Le texte devient blanc au survol */
+}
+
+.button-cta-fill::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%; /* Commence vide */
+    height: 100%;
+    background-color:#8a41fe    ; /* Couleur de fond (modifiable avec CSS) */
+    z-index: 0;
+    transition: width 0.4s ease; /* Animation fluide */
+}
+
+.button-cta-fill:hover::before {
+    width: 100%; /* Remplit le fond sur toute la largeur */
+}
+
+.button-cta-fill span,
+.button-cta-fill svg {
+    position: relative;
+    z-index: 1; /* Garde le texte et l'icône au-dessus du fond */
+}
