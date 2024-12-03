@@ -21,7 +21,6 @@ links.forEach(link => {
 
     // Animation au clic
     link.addEventListener("click", (e) => {
-        e.preventDefault(); // Empêche le comportement par défaut pour la démo
         gsap.fromTo(link,
             { color: "#8a41fe" }, // Couleur initiale au clic
             {
