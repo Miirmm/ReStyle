@@ -8,7 +8,6 @@ nav a::after {
     background-color: #8a41fe;
     transition: width 0.3s ease;
 }
-
 nav a:hover::after {
     width: 100%; /* Ligne visible au survol */
 }
@@ -37,9 +36,11 @@ body {
 @keyframes swing {
     0%, 100% {
         transform: rotate(15deg);
+        scale: 105%;
     }
     50% {
-        transform: rotate(-15deg); /* Tourne à gauche */
+        transform: rotate(-15deg);
+        scale: 95%;/* Tourne à gauche */
     }
 }
 
@@ -58,8 +59,10 @@ body {
 @keyframes swing2 {
     0%, 100% {
         transform: rotate(-15deg);
+        scale: 95%;
     }
     50% {
-        transform: rotate(15deg); /* Tourne à gauche */
+        transform: rotate(15deg);
+        scale: 105%;/* Tourne à gauche */
     }
 }
