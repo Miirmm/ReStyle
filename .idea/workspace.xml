@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c944e1e-0a9f-48f2-a131-e01b6e45f59b" name="Changes" comment="0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/aide.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/aide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/annonce.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/annonce.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/annonce2.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/annonce2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/annonce3.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/annonce3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/catalogue.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/catalogue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/connexion.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/connexion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/favoris.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/favoris.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/inscription.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/inscription.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/mention.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/mention.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/profil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo-restyle.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/propos.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/propos.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +54,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "main",
     "last_directory_selection": "C:/Users/Etudiant/WebstormProjects/ReStyle",
     "last_opened_file_path": "C:/Users/Etudiant/WebstormProjects/ReStyle/img",
     "list.type.of.created.stylesheet": "CSS",
