@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentions Légales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oi&family=Orbitron:wght@400..900&family=Pattaya&family=Press+Start+2P&family=Questrial&family=Roboto+Slab:wght@100..900&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Shrikhand&family=Teko:wght@300..700&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: "#001008",
+              background: "#edfff7",
+              primary: "#A3FFD6",
+              secondary: "#8088fe",
+              accent: "#8a41fe",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-background text-gray-800">
+    <header>
+      <nav class="bg-primary border-gray-200 dark:bg-primary">
+        <div class="flex flex-wrap items-center mx-none p-4">
+          <a
+            href="../index.css"
+            class="flex items-center mr-4 space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="../img/logo-restyle.png"
+              class="h-16"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div class="flex ml-auto justify-end md:order-2">
+            <div class="relative hidden w-2/4 md:block">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-text dark:text-text"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-text rounded-lg bg-background dark:bg-background dark:placeholder-gray-400 dark:text-textdark:focus:ring-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <button
+              type="button"
+              class="mr-2 ml-2 text-text bg-accent hover:bg-secondary focus:outline-none focus:ring-secondary font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-accent dark:hover:bg-secondary dark:focus:ring-secondary"
+            >
+              <a href="inscription.html"> Connexion </a>
+            </button>
+            <i
+              class="fa-solid mt-4 ml-2 mr-2 fa-2xl fa-user"
+              style="color: #000000"
+            ></i>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalogue.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a
+                  href="favoris.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Favoris</a
+                >
+              </li>
+              <li>
+                <a
+                  href="aide.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Aide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Container principal -->
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+      <!-- Titre principal -->
+      <h1 class="text-3xl font-bold text-center text-gray-900 mb-6">
+        Mentions Légales
+      </h1>
+
+      <!-- Informations légales -->
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-3">1. Éditeur du site</h2>
+        <p class="text-gray-700">
+          Le site <span class="font-semibold">Restyle</span> est édité par :
+        </p>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li>
+            <strong>Nom : kevinmael-superdevelopeurdu69-bg-background</strong>
+          </li>
+          <li>
+            <strong>Adresse : 15 rue des champ</strong>
+          </li>
+          <li>
+            <strong>Email : </strong>
+            <a
+              href="mailto:contact@domaine.com"
+              class="text-blue-600 hover:underline"
+              >maelkevinlessuperdeveloppeur@dev.fr
+            </a>
+          </li>
+          <li><strong>Téléphone : 06 95 85 52 52 </strong></li>
+        </ul>
+      </section>
+
+      <!-- Hébergeur -->
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-3">2. Hébergement</h2>
+        <p class="text-gray-700">Le site est hébergé par :</p>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li><strong>Nom :</strong> o2switch</li>
+          <li>
+            <strong>Adresse :</strong> Chem. des Pardiaux, 63000
+            Clermont-Ferrand
+          </li>
+          <li><strong>Téléphone :</strong>04 44 44 60 40</li>
+        </ul>
+      </section>
+
+      <!-- Propriété intellectuelle -->
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-3">3. Propriété intellectuelle</h2>
+        <p class="text-gray-700">
+          Tous les contenus présents sur ce site (textes, images, vidéos, logos,
+          etc.) sont la propriété exclusive de
+          <span class="font-semibold">Restyle</span>, sauf indication contraire.
+          Toute reproduction, distribution ou utilisation sans autorisation
+          préalable est strictement interdite.
+        </p>
+      </section>
+
+      <!-- Politique de confidentialité -->
+      <section class="mb-6">
+        <h2 class="text-xl font-semibold mb-3">4. Données personnelles</h2>
+        <p class="text-gray-700">
+          Conformément à la réglementation en vigueur, vous disposez d’un droit
+          d’accès, de rectification, de suppression et d’opposition concernant
+          vos données personnelles. Pour toute demande, veuillez nous contacter
+          à
+          <a
+            href="mailto:contact@domaine.com"
+            class="text-blue-600 hover:underline"
+            >Restyle.support@gmail.com</a
+          >.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section>
+        <h2 class="text-xl font-semibold mb-3">5. Contact</h2>
+        <p class="text-gray-700">
+          Pour toute question, vous pouvez nous écrire à l’adresse email
+          suivante :
+          <a
+            href="mailto:contact@domaine.com"
+            class="text-blue-600 hover:underline"
+            >Restyle.support@gmail.com</a
+          >.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
