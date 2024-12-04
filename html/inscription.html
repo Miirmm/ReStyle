@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <link href="../img/logo-restyle.png" rel="icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet"/>
+  <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      'text': '#001008',
+                      'background': '#edfff7',
+                      'primary': '#A3FFD6',
+                      'secondary': '#8088fe',
+                      'accent': '#8a41fe',
+                  }
+              }
+          }
+      }
+  </script>
+  <!--  fin tail wind -->
+  <!--  font awesome-->
+  <script src="https://kit.fontawesome.com/28c3dd4fc8.js" crossorigin="anonymous"></script>
+  <!--  fin font awesome-->
+  <!--  fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+  <!--  fin fonts-->
+  
+  <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+  />
+  
+  <!-- Font Awesome Link -->
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+          integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+          crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/connexion.css">
+</head>
+<body class="body-connexion">
+<header>
+  
+  <nav class="bg-white border-gray-200 dark:bg-primary rounded-b-3xl w-full">
+    <div class=" flex flex-wrap items-center  mx-none p-4">
+      <a href="../html/index.html" class="flex items-center mr-4 space-x-3 rtl:space-x-reverse">
+        <img src="../img/logo-restyle.png" class="h-16" alt="Logo Restyle"/>
+      
+      </a>
+      <div class="flex ml-auto justify-end md:order-2">
+        
+        <div class="relative hidden w-2/4 md:block">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-text dark:text-text" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+            <span class="sr-only">Search icon</span>
+          </div>
+          <input type="text" id="search-navbar"
+                 class="block w-full p-2 ps-10 text-sm text-text  rounded-lg bg-background  dark:bg-background  dark:placeholder-gray-400 dark:text-textdark:focus:ring-blue-500 "
+                 placeholder="Search...">
+        </div>
+       
+        <a href="inscription.html"
+                class="mr-2 ml-2 text-text bg-accent hover:bg-secondary   focus:outline-none focus:ring-secondary font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-accent dark:hover:bg-secondary dark:focus:ring-secondary">
+          Connexion
+        </a>
+        
+       <a href="profil.html"><i class="fa-solid mt-4 ml-2 mr-2 fa-2xl fa-user" style="color: #000000;"></i></a>
+        <button data-collapse-toggle="navbar-search" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                 fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar"
+                 class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                 placeholder="Search...">
+        </div>
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium  rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  ">
+          <li>
+            <a href="../html/index.html"
+               class="block py-2 px-3 text-text  rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+               aria-current="page">Accueil</a>
+          </li>
+          <li>
+            <a href="catalogue.html"
+               class="block py-2 px-3 text-text  rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+               aria-current="page">Catalogue</a>
+          </li>
+          <li>
+            <a href="favoris.html"
+               class="block py-2 px-3 text-text  rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+               aria-current="page">Favoris</a>
+          </li>
+          <li>
+            <a href="aide.html"
+               class="block py-2 px-3 text-text  rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+               aria-current="page">Aide</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  
+  
+  
+  <section>
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-accent dark:border-secondary">
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Creer un compte
+          </h1>
+          <form class="space-y-4 md:space-y-6" action="#">
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail</label>
+              <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required="">
+            </div>
+            <div>
+              <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
+              <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+            </div>
+            <div>
+              <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Confirmation du mot de passe</label>
+              <input type="confirm-password" name="confirm-password" id="confirm-password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+            </div>
+            <div class="flex items-start">
+              <div class="flex items-center h-5">
+                <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="terms" class="font-light text-gray-500 dark:text-gray-300">J'accepte <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">les conditions </a></label>
+              </div>
+            </div>
+            <button type="submit" class="w-full text-text bg-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
+            <p class="text-md font-light text-text dark:text-text">
+              Déja inscrit ? <a href="connexion.html" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Connexion</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
+<footer class="bg-white shadow m-0 dark:bg-primary">
+  
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-md text-text sm:text-center dark:text-text">© 2023 <a href="https://flowbite.com/" class="hover:underline">ReStyle</a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-text dark:text-text sm:mt-0">
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">A propos</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">Politique de confidentialité</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">Mentions légales</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+
+<!-- RoughEase, ExpoScaleEase and SlowMo are all included in the EasePack file -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EasePack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+<script src="../js/connexion.js"></script>
+</body>
+</html>
