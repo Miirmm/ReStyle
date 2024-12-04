@@ -1,0 +1,13 @@
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #8a41fe;
+    transition: width 0.3s ease;
+}
+nav a:hover::after {
+    width: 100%; /* Ligne visible au survol */
+}
