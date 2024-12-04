@@ -1,0 +1,37 @@
+.hero {
+  height: 100vh;
+  text-align: center;
+  font-family: "Merienda", cursive;
+}
+.hero1 img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+.hero2 {
+  z-index: 2;
+  position: absolute;
+  top: 60%;
+  width: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero2 a {
+  padding: 1em;
+  border-radius: 1em;
+}
+.justify-around {
+  width: 50%;
+  transform: translate(-50%);
+  margin-left: 50%;
+}
+h5 {
+  font-family: "Merienda", cursive;
+}
+.reseaux a {
+  transition: all 0.3s ease;
+}
+.reseaux a:hover {
+  scale: 1.1;
+}
