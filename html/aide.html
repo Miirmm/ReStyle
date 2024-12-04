@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annonce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/aide.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oi&family=Orbitron:wght@400..900&family=Pattaya&family=Press+Start+2P&family=Questrial&family=Roboto+Slab:wght@100..900&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Shrikhand&family=Teko:wght@300..700&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: "#001008",
+              background: "#edfff7",
+              primary: "#A3FFD6",
+              secondary: "#8088fe",
+              accent: "#8a41fe",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background">
+    <header>
+      <nav class="bg-primary border-gray-200 dark:bg-primary">
+        <div class="flex flex-wrap items-center mx-none p-4">
+          <a
+            href="../index.css"
+            class="flex items-center mr-4 space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="../img/logo-restyle.png"
+              class="h-16"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div class="flex ml-auto justify-end md:order-2">
+            <div class="relative hidden w-2/4 md:block">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-text dark:text-text"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-text rounded-lg bg-background dark:bg-background dark:placeholder-gray-400 dark:text-textdark:focus:ring-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <button
+              type="button"
+              class="mr-2 ml-2 text-text bg-accent hover:bg-secondary focus:outline-none focus:ring-secondary font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-accent dark:hover:bg-secondary dark:focus:ring-secondary"
+            >
+              <a href="inscription.html"> Connexion </a>
+            </button>
+            <i
+              class="fa-solid mt-4 ml-2 mr-2 fa-2xl fa-user"
+              style="color: #000000"
+            ></i>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalogue.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a
+                  href="favoris.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Favoris</a
+                >
+              </li>
+              <li>
+                <a
+                  href="aide.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Aide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="py-10 sm:py-16 lg:py-24">
+        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+          <div class="max-w-2xl mx-auto text-center">
+            <h2
+              id="titre"
+              class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl"
+            >
+              Des Questions ?
+            </h2>
+          </div>
+          <div class="max-w-3xl mx-auto mt-8 space-y-4 md:mt-16" id="faq">
+            <div
+              class="transition-all duration-200 bg-primary border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+            >
+              <button
+                type="button"
+                id="question1"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+              >
+                <span class="flex text-lg font-semibold text-black"
+                  >Comment fonctionne Restyle ?</span
+                >
+                <svg
+                  id="arrow1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer1"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p>
+                  Restyle est une marketplace dédiée à la revente de vêtements
+                  de seconde main. Vous pouvez créer un compte, publier vos
+                  articles avec des photos et une description, et fixer votre
+                  prix. Les acheteurs intéressés peuvent vous contacter
+                  directement ou acheter via la plateforme.
+                </p>
+              </div>
+            </div>
+            <div
+              class="transition-all duration-200 bg-primary border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+            >
+              <button
+                type="button"
+                id="question2"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+              >
+                <span class="flex text-lg font-semibold text-black"
+                  >Quels types de vêtements puis-je vendre sur Restyle ?</span
+                >
+                <svg
+                  id="arrow2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer2"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p>
+                  Vous pouvez vendre des vêtements pour hommes, femmes et
+                  enfants, ainsi que des accessoires comme des sacs, des
+                  chaussures ou des bijoux. Assurez-vous que les articles soient
+                  en bon état et correspondent à une seconde vie.
+                </p>
+              </div>
+            </div>
+            <div
+              class="transition-all duration-200 bg-primary border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+            >
+              <button
+                type="button"
+                id="question3"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+              >
+                <span class="flex text-lg font-semibold text-black">
+                  Comment se passe le paiement ?</span
+                >
+                <svg
+                  id="arrow3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer3"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p>
+                  Les paiements se font directement via notre plateforme pour
+                  garantir une sécurité maximale. Une fois la transaction
+                  confirmée, les fonds sont transférés au vendeur, moins une
+                  petite commission.
+                </p>
+              </div>
+            </div>
+            <div
+              class="transition-all duration-200 bg-primary border border-gray-200 shadow-lg cursor-pointer hover:bg-gray-50"
+            >
+              <button
+                type="button"
+                id="question4"
+                data-state="closed"
+                class="flex items-center justify-between w-full px-4 py-5 sm:p-6"
+              >
+                <span class="flex text-lg font-semibold text-black"
+                  >Est-ce que l'inscription est gratuite ?</span
+                >
+                <svg
+                  id="arrow4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              <div
+                id="answer4"
+                style="display: none"
+                class="px-4 pb-5 sm:px-6 sm:pb-6"
+              >
+                <p>
+                  Oui, l'inscription sur Restyle est totalement gratuite. Vous
+                  ne payez qu'une commission lorsque vous vendez un article.
+                  Aucun frais caché !
+                </p>
+              </div>
+            </div>
+          </div>
+          <p class="text-center text-gray-600 textbase mt-9">
+            D'autres question ?
+            <a href="#contact"
+              ><span
+                class="cursor-pointer font-medium text-tertiary transition-all duration-200 hover:text-tertiary focus:text-tertiary hover-underline"
+                >Contactez le support
+              </span></a
+            >
+          </p>
+        </div>
+      </section>
+      <section class="dark:bg-slate-800" id="contact">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div class="mb-4">
+            <div
+              class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12"
+            >
+              <p
+                class="text-base font-semibold uppercase tracking-wide text-accent dark:text-blue-200"
+              >
+                Contact
+              </p>
+              <h2
+                class="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl"
+              >
+                Entrer en Contact
+              </h2>
+              <p
+                class="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400"
+              >
+                Notre support client à votre disposition
+              </p>
+            </div>
+          </div>
+          <div class="flex items-stretch justify-center">
+            <div class="grid md:grid-cols-2">
+              <div class="h-full pr-6">
+                <p class="mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                  Si vous avez des questions, des préoccupations ou besoin
+                  d’assistance, notre service client est à votre disposition
+                  pour vous aider. Votre satisfaction est notre priorité, et
+                  nous sommes là pour rendre votre expérience aussi agréable que
+                  possible.
+                </p>
+                <ul class="mb-6 md:mb-0">
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-accent text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                        <path
+                          d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3
+                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
+                      >
+                        Notre Adresse
+                      </h3>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        158 Avenue de glace
+                      </p>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        Genève, Suisse
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-accent text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path
+                          d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                        ></path>
+                        <path d="M15 7a2 2 0 0 1 2 2"></path>
+                        <path d="M15 3a6 6 0 0 1 6 6"></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3
+                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
+                      >
+                        Contact
+                      </h3>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        Tél: +33 8 56 20 23 56
+                      </p>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        Mail: ReStyle@gmail.com
+                      </p>
+                    </div>
+                  </li>
+                  <li class="flex">
+                    <div
+                      class="flex h-10 w-10 items-center justify-center rounded bg-accent text-gray-50"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="h-6 w-6"
+                      >
+                        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                        <path d="M12 7v5l3 3"></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 mb-4">
+                      <h3
+                        class="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white"
+                      >
+                        Horaire
+                      </h3>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        Lundi - Samedi: 08:00 - 17:00
+                      </p>
+                      <p class="text-gray-600 dark:text-slate-400">
+                        Dimanche : 08:00 - 12:00
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="card h-fit max-w-6xl p-5 md:p-12" id="form">
+                <h2 class="mb-4 text-2xl font-bold dark:text-white">
+                  Un message à nous faire passé ?
+                </h2>
+                <form id="contactForm">
+                  <div class="mb-6">
+                    <div class="mx-0 mb-1 sm:mb-4">
+                      <div class="mx-0 mb-1 sm:mb-4">
+                        <label
+                          for="name"
+                          class="pb-1 text-xs uppercase tracking-wider"
+                        ></label
+                        ><input
+                          type="text"
+                          id="name"
+                          autocomplete="given-name"
+                          placeholder="Votre nom"
+                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                          name="name"
+                        />
+                      </div>
+                      <div class="mx-0 mb-1 sm:mb-4">
+                        <label
+                          for="email"
+                          class="pb-1 text-xs uppercase tracking-wider"
+                        ></label
+                        ><input
+                          type="email"
+                          id="email"
+                          autocomplete="email"
+                          placeholder="Votre adresse mail"
+                          class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                          name="email"
+                        />
+                      </div>
+                    </div>
+                    <div class="mx-0 mb-1 sm:mb-4">
+                      <label
+                        for="textarea"
+                        class="pb-1 text-xs uppercase tracking-wider"
+                      ></label
+                      ><textarea
+                        id="textarea"
+                        name="textarea"
+                        cols="30"
+                        rows="5"
+                        placeholder="Ecrivez votre message..."
+                        class="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button
+                      type="submit"
+                      class="w-full bg-accent text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                    >
+                      Envoyer votre message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-20 bg-primary shadow m-0 dark:bg-primary">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-md text-text sm:text-center dark:text-text"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">ReStyle</a>.
+          All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-text dark:text-text sm:mt-0"
+        >
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">A propos</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6"
+              >Politique de confidentialité</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6"
+              >Mentions légales</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/28c3dd4fc8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="../gsap.js"></script>
+
+    <script>
+      // JavaScript to toggle the answers and rotate the arrows
+      document
+        .querySelectorAll('[id^="question"]')
+        .forEach(function (button, index) {
+          button.addEventListener("click", function () {
+            var answer = document.getElementById("answer" + (index + 1));
+            var arrow = document.getElementById("arrow" + (index + 1));
+
+            if (
+              answer.style.display === "none" ||
+              answer.style.display === ""
+            ) {
+              answer.style.display = "block";
+              arrow.style.transform = "rotate(0deg)";
+            } else {
+              answer.style.display = "none";
+              arrow.style.transform = "rotate(-90deg)";
+            }
+          });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+      // Animation de chargement
+      window.addEventListener("load", () => {
+        const faq = document.getElementById("faq");
+
+        gsap.timeline().set(faq, { clipPath: "inset(0 100% 0 0)" }).to(faq, {
+          clipPath: "inset(0 0% 0 0)",
+          duration: 1.5,
+          ease: "power2.out",
+        });
+      });
+    </script>
+    <script>
+      // Animation de chargement
+      window.addEventListener("load", () => {
+        const titre = document.getElementById("titre");
+
+        gsap
+          .timeline()
+          .set(titre, { clipPath: "inset(0 100% 0 0)" })
+          .to(titre, {
+            clipPath: "inset(0 0% 0 0)",
+            duration: 1.5,
+            ease: "power2.out",
+          });
+      });
+    </script>
+  </body>
+</html>

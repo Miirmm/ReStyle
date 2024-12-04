@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annonce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/favoris.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merienda:wght@300..900&family=Modak&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oi&family=Orbitron:wght@400..900&family=Pattaya&family=Press+Start+2P&family=Questrial&family=Roboto+Slab:wght@100..900&family=Rubik+Glitch&family=Rubik+Wet+Paint&family=Shrikhand&family=Teko:wght@300..700&display=swap");
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              text: "#001008",
+              background: "#edfff7",
+              primary: "#A3FFD6",
+              secondary: "#8088fe",
+              accent: "#8a41fe",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background">
+    <header>
+      <nav class="bg-primary border-gray-200 dark:bg-primary">
+        <div class="flex flex-wrap items-center mx-none p-4">
+          <a
+            href="../index.html"
+            class="flex items-center mr-4 space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="../img/logo-restyle.png"
+              class="h-16"
+              alt="Flowbite Logo"
+            />
+          </a>
+          <div class="flex ml-auto justify-end md:order-2">
+            <div class="relative hidden w-2/4 md:block">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-text dark:text-text"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+                <span class="sr-only">Search icon</span>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-text rounded-lg bg-background dark:bg-background dark:placeholder-gray-400 dark:text-textdark:focus:ring-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <button
+              type="button"
+              class="mr-2 ml-2 text-text bg-accent hover:bg-secondary focus:outline-none focus:ring-secondary font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-accent dark:hover:bg-secondary dark:focus:ring-secondary"
+            >
+              <a href="inscription.html"> Connexion </a>
+            </button>
+            <i
+              class="fa-solid mt-4 ml-2 mr-2 fa-2xl fa-user"
+              style="color: #000000"
+            ></i>
+            <button
+              data-collapse-toggle="navbar-search"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-search"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+            </div>
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
+            >
+              <li>
+                <a
+                  href="../index.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  href="catalogue.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Catalogue</a
+                >
+              </li>
+              <li>
+                <a
+                  href="favoris.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Favoris</a
+                >
+              </li>
+              <li>
+                <a
+                  href="aide.html"
+                  class="block py-2 px-3 text-text rounded md:bg-transparent md:text-text md:p-0 md:dark:text-text"
+                  aria-current="page"
+                  >Aide</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="recent flex justify-evenly mt-14 flex-wrap">
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce.html">
+            <img
+              class="rounded-t-lg"
+              src="../img/casquette.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">
+                Casquette rouge
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Une casquette orange en parfait état. <br /><br />
+              prix : 9$
+            </p>
+            <a
+              href="annonce.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce2.html">
+            <img
+              class="rounded-t-lg"
+              src="../img/sweat.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce2.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">
+                Sweat Céline
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Sweat en bonne état, porté 2 fois.
+              <br /><br />
+              prix : 15$
+            </p>
+            <a
+              href="annonce2.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce3.html">
+            <img
+              class="rounded-t-lg object-cover"
+              src="../img/lampe.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce3.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">Lampe</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Lampe en état correct, ampoule à changer. <br /><br />prix :
+              85.99$
+            </p>
+            <a
+              href="annonce3.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="recent flex justify-evenly mt-14 flex-wrap">
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce.html">
+            <img
+              class="rounded-t-lg"
+              src="../img/jordan1.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">
+                jordan 1
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Jordan 1 neuf blanc taille enfant. <br /><br />
+              prix : 68$
+            </p>
+            <a
+              href="annonce.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce2.html">
+            <img
+              class="rounded-t-lg"
+              src="../img/tshirt2.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce2.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">
+                t-shirt
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              T-shirt pour femmes
+              <br /><br />
+              prix : 15$
+            </p>
+            <a
+              href="annonce2.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="mt-5 shadow-lg max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        >
+          <a href="annonce3.html">
+            <img
+              class="rounded-t-lg object-cover"
+              src="../img/tshirt.jpg"
+              alt="image-vetement"
+            />
+          </a>
+          <div class="p-5">
+            <a href="annonce3.html">
+              <h5 class="mb-5 text-2xl text-gray-900 dark:text-white">
+                t-shirt homme noir
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              tshirt pour homme noir <br /><br />prix : 85.99$
+            </p>
+            <a
+              href="annonce3.html"
+              class="mt-5 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-accent rounded-lg hover:bg--800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Voir plus
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+
+            <button
+              class="ml-5 group transition-all duration-500 p-4 rounded-full bg-accent hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="white"
+              >
+                <path
+                  d="M4.47084 14.3196L13.0281 22.7501L21.9599 13.9506M13.0034 5.07888C15.4786 2.64037 19.5008 2.64037 21.976 5.07888C24.4511 7.5254 24.4511 11.4799 21.9841 13.9265M12.9956 5.07888C10.5204 2.64037 6.49824 2.64037 4.02307 5.07888C1.54789 7.51738 1.54789 11.4799 4.02307 13.9184M4.02307 13.9184L4.04407 13.939M4.02307 13.9184L4.46274 14.3115"
+                  stroke="white"
+                  stroke-width="1.6"
+                  stroke-miterlimit="10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-10 bg-primary shadow m-0 dark:bg-primary">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-md text-text sm:text-center dark:text-text"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">ReStyle</a>.
+          All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-text dark:text-text sm:mt-0"
+        >
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6">A propos</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6"
+              >Politique de confidentialité</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline me-4 md:me-6"
+              >Mentions légales</a
+            >
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/28c3dd4fc8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
