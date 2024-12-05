@@ -13,13 +13,13 @@ nav a:hover::after {
 }
 
 body {
-    background-image: url("https://img.freepik.com/free-photo/blurred-background-clothing-store_1258-82.jpg?t=st=1733232231~exp=1733235831~hmac=873e245f03d470bdf7befddd5ba8b44889ed45ab374c940e19ce721acdaa3b44&w=996");
+    background-image: url('../img/img-fond1.jpg');
     background-attachment: fixed;
     background-size: cover;
 }
 
 .body-connexion{
-    background-image: url("https://img.freepik.com/free-photo/blur-shopping-mall_1203-8809.jpg?t=st=1733232691~exp=1733236291~hmac=135a5ad25d3496d50cd96beab75b5407cdbd88e0f66822bc1eb6dc550b8ee522&w=996");
+    background-image: url('../img/img-fond2.jpg');
     background-attachment: fixed;
     background-size: cover;
 }

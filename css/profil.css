@@ -11,3 +11,6 @@ nav a::after {
 nav a:hover::after {
     width: 100%; /* Ligne visible au survol */
 }
+body{
+    background-color: #edfff7;
+}
