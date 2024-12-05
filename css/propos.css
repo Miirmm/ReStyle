@@ -1,0 +1,8 @@
+.margin {
+  margin-top: -30%;
+}
+@media screen and (max-width: 1080px) {
+  .margin {
+    margin-top: 0;
+  }
+}
