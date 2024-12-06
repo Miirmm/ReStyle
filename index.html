@@ -188,16 +188,7 @@
         </div>
       </nav>
     </header>
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex items-center justify-center bg-background z-50"
-    >
-      <img
-        src="./img/favicon.ico"
-        alt="Logo"
-        class="w-32 opacity-0 scale-50"
-      />
-    </div>
+   
     <main class="bg-background">
       <section class="hero">
         <div class="hero1">
@@ -655,29 +646,6 @@
       AOS.init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script>
-      // Animation de chargement
-      window.addEventListener("load", () => {
-        const loadingScreen = document.getElementById("loading-screen");
-        const logo = loadingScreen.querySelector("img");
-
-        // Animation d'apparition et disparition
-        gsap
-          .timeline()
-          .to(logo, { opacity: 1, scale: 1.5, duration: 1, ease: "power2.out" })
-          .to(logo, {
-            delay: 0.5,
-            opacity: 0,
-            scale: 0.5,
-            duration: 1,
-            ease: "power2.in",
-          }) // Disparition
-          .to(loadingScreen, {
-            opacity: 0,
-            duration: 0.5,
-            onComplete: () => loadingScreen.remove(),
-          });
-      });
-    </script>
+ 
   </body>
 </html>
